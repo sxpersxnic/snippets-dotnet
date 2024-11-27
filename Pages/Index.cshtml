@@ -1,0 +1,31 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<style>
+  .page-ctn {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin: 4rem;
+    height: 100%;
+  }
+
+  .text-ctn {
+    text-align: left; 
+    max-width: 800px;  
+    padding: 50px;
+    border: 1px solid;  
+    border-radius: 10px;
+    border-color: #e5e5e5;
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+  } 
+</style>
+<div class="page-ctn">
+    <div class="text-ctn">
+        <h1 class="display-4">Welcome!</h1>
+        <p>This is the API used by the <a href="https://github.com/sxpersxnic/Angular-Snippets">Snippets App</a></p>
+    </div>
+</div>
