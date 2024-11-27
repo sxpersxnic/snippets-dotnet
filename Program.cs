@@ -1,9 +1,14 @@
-using Microsoft.AspNetCore.Hosting.StaticWebAssets;
+using Microsoft.EntityFrameworkCore;
+using snippets.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddDbContext<ApiDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 // Add services to the container.
 builder.Services.AddRazorPages();
+
 builder.Services.AddControllers();
 
 var app = builder.Build();
