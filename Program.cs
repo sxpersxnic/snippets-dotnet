@@ -3,8 +3,19 @@ using snippets.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<ApiDbContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+var devDbConnectionString = builder.Configuration["ApiDbContext"];
+var productionDbConnectionString = builder.Configuration["ProductionApiDbContext"];
+
+if (builder.Environment.IsDevelopment())
+{
+    builder.Services.AddDbContext<ApiDbContext>(options =>
+        options.UseNpgsql(devDbConnectionString));
+}
+else
+{
+    builder.Services.AddDbContext<ApiDbContext>(options =>
+        options.UseNpgsql(productionDbConnectionString));
+}
 
 // Add services to the container.
 builder.Services.AddRazorPages();
