@@ -1,28 +1,3 @@
-<<<<<<< HEAD
-﻿{
-  "$schema": "https://json.schemastore.org/launchsettings.json",
-  "profiles": {
-    "http": {
-      "commandName": "Project",
-      "dotnetRunMessages": true,
-      "launchBrowser": false,
-      "applicationUrl": "http://localhost:5085",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      }
-    },
-    "https": {
-      "commandName": "Project",
-      "dotnetRunMessages": true,
-      "launchBrowser": false,
-      "applicationUrl": "https://localhost:7069;http://localhost:5085",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      }
-    }
-  }
-}
-=======
 {
   "$schema": "https://json.schemastore.org/launchsettings.json",
   "profiles": {
@@ -37,4 +12,3 @@
     }
   }
 }
->>>>>>> eb3f574 (Init)
